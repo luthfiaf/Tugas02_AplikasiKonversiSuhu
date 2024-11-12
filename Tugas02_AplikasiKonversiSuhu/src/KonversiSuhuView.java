@@ -55,6 +55,19 @@ buttonGroup.add(jRadioButtonKelvin);
             }
         });
 
+        // Menambahkan ItemListener pada jRadioButton
+        jRadioButtonCelcius.addItemListener(evt -> konversiAutomatis());
+        jRadioButtonFahrenheit.addItemListener(evt -> konversiAutomatis());
+        jRadioButtonReamur.addItemListener(evt -> konversiAutomatis());
+        jRadioButtonKelvin.addItemListener(evt -> konversiAutomatis());
+    }
+
+    private void konversiAutomatis() {
+        // Memanggil aksi konversi otomatis ketika radio button dipilih
+        if (!jTextFieldinput.getText().isEmpty()) {
+            btnKonversiActionPerformed(null);
+        }
+        
     }
 
     /**
